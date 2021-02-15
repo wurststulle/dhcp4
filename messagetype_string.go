@@ -4,9 +4,9 @@ package dhcp4
 
 import "fmt"
 
-const _MessageType_name = "DiscoverOfferRequestDeclineACKNAKReleaseInform"
+const _MessageType_name = "DiscoverOfferRequestDeclineACKNAKReleaseInformForceRenew"
 
-var _MessageType_index = [...]uint8{0, 8, 13, 20, 27, 30, 33, 40, 46}
+var _MessageType_index = [...]uint8{0, 8, 13, 20, 27, 30, 33, 40, 46, 56}
 
 func (i MessageType) String() string {
 	i -= 1

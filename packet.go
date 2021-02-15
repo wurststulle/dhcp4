@@ -209,14 +209,15 @@ const (
 
 // DHCP Message Type 53
 const (
-	Discover MessageType = 1 // Broadcast Packet From Client - Can I have an IP?
-	Offer    MessageType = 2 // Broadcast From Server - Here's an IP
-	Request  MessageType = 3 // Broadcast From Client - I'll take that IP (Also start for renewals)
-	Decline  MessageType = 4 // Broadcast From Client - Sorry I can't use that IP
-	ACK      MessageType = 5 // From Server, Yes you can have that IP
-	NAK      MessageType = 6 // From Server, No you cannot have that IP
-	Release  MessageType = 7 // From Client, I don't need that IP anymore
-	Inform   MessageType = 8 // From Client, I have this IP and there's nothing you can do about it
+	Discover   MessageType = 1 // Broadcast Packet From Client - Can I have an IP?
+	Offer      MessageType = 2 // Broadcast From Server - Here's an IP
+	Request    MessageType = 3 // Broadcast From Client - I'll take that IP (Also start for renewals)
+	Decline    MessageType = 4 // Broadcast From Client - Sorry I can't use that IP
+	ACK        MessageType = 5 // From Server, Yes you can have that IP
+	NAK        MessageType = 6 // From Server, No you cannot have that IP
+	Release    MessageType = 7 // From Client, I don't need that IP anymore
+	Inform     MessageType = 8 // From Client, I have this IP and there's nothing you can do about it
+	ForceRenew MessageType = 9 // From Server, I have updates for you, do Discover again
 )
 
 //go:generate stringer -type=OptionCode
