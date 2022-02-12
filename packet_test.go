@@ -197,6 +197,14 @@ func TestRequestPacket(t *testing.T) {
 			broadcast:   true,
 			options:     twoOptionsSlice,
 		},
+		{
+			description: "force renew request",
+			mt:          ForceRenew,
+			chAddr:      net.HardwareAddr{170, 187, 204, 221, 238, 255}, // aa:bb:cc:dd:ee:ff
+			xId:         []byte{12, 13, 14, 15},
+			broadcast:   false,
+			options:     twoOptionsSlice,
+		},
 	}
 
 	for i, tt := range tests {
